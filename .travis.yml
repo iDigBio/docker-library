@@ -21,7 +21,10 @@ jobs:
       - DOCKERFILE_DIR=base-idb-backend
       - DOCKER_IMAGE_NAME=idigbio/docker-library.base-idb-backend
 script:
-- docker build -t "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT" "$DOCKERFILE_DIR";
+- docker build -t "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT" "$DOCKERFILE_DIR"
+- docker tag "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT" "$DOCKER_IMAGE_NAME:latest" 
+- docker login --username="$DOCKER_USERNAME" --password="$DOCKER_PASSWORD"
+- docker push "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT" "$DOCKER_IMAGE_NAME:latest"
 
 after_success:
 - docker images

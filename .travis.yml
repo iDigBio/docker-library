@@ -17,8 +17,9 @@ branches:
 jobs:
   include:
   - name: "Base for idb-backend"
-    env: DOCKERFILE_LOCATION=base-idb-backend
-    env: DOCKER_IMAGE_NAME=idigbio/docker-library-base-idb-backend
+    env:
+      - DOCKERFILE_LOCATION=base-idb-backend
+      - DOCKER_IMAGE_NAME=idigbio/docker-library-base-idb-backend
 script:
 - env;
   export;

@@ -20,7 +20,7 @@ jobs:
     env: DOCKERFILE_LOCATION=base-idb-backend
     env: DOCKER_IMAGE_NAME=idigbio/docker-library-base-idb-backend
 script:
-- docker build -t $DOCKER_IMAGE_NAME:$TRAVIS_COMMIT $DOCKERFILE_LOCATION
+- docker build -t "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT" "$DOCKERFILE_LOCATION"
 
 after_success:
 - docker images

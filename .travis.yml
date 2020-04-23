@@ -1,12 +1,8 @@
 sudo: required
 dist: bionic
 language: generic
-# python: 2.7 
 services:
 - docker
-# - postgresql
-# addons:
-#  postgresql: "9.5"
 
 branches:
   only:

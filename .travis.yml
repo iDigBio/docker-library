@@ -33,27 +33,6 @@ script:
   - docker push "$DOCKER_IMAGE_NAME:latest"
   - docker push "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT"
 
-after_success:
-- docker images
-
-# rest of script...
-#; docker push $DOCKER_IMAGE:$TRAVIS_TAG
-
-# after_success:
-# - docker login --username="$DOCKER_USERNAME" --password="$DOCKER_PASSWORD"
-# deploy:
-#   - provider: script
-#     script: docker tag $BUILDING $DOCKER_IMAGE:$TRAVIS_TAG; docker push $DOCKER_IMAGE:$TRAVIS_TAG
-#     on:
-#       tags: true
-#   - provider: script
-#     script: bash scripts/docker-push.sh
-#     on:
-#       all_branches: true
-# env:
-#   global:
-# - BUILDING=$DOCKER_IMAGE:$TRAVIS_COMMIT
-
-# notifications:
-#   slack:
-#     secure: "GVJcqmhKww+74MaAKiSPIf2oPxEFp0PoYHzdzL0xw5xd62OiJkrcdzOsiZ5DQxLlgU+MgWrxcxJmunMXOUvR7gt1V1WjuvYsmJ6+bC4/AU81Qr0z5BDANZRX7O8yA/WLvPyE5hsJQWAyBL0NFvkKbxzw/qKlaaoh+uUXI2FLA+LMq6kuW1BYyQuFsoX/14842ppRETrxK5uVAft7c+Egh68Tet5xO5lry3bBFZ0F75Jg5nuzgAgq3OcOe8Luo8FuekX75tBjT0hBNSM+Kn9LOPx25O6tRfivCJn1quOPNSNhet8zbeYecnSevW49VLtWi34fLX6rIsPcvGZg1Z5q1MjvxqDtuIEnhLBeR/8+hK+dLu6MP0YGcG4jBELEH13WlkmJJcH1X+DmRLK1tkgwWhJlW1RJ/QHPoqsMKMNFxS4aDenFGiYXSvv7skX8pr+i2QW1j55V6AU55OCvhsrgyHwFXlA+1ItU5geCVvmLscg8RXF7HuTrZrN/UxLjDVPAjY4rHS2ccZx1g3vo+K0OWafKk6yOi9J7rfwT+OGCMGv3Q57i1ShDIHvmfzfJmsjhtRCvKowwUrw2/Udean/ncdcRLvTTv0Xn+ioxnWAyvWo7UMdXj7YeHvp4bT9pY2eSjfHjB6Fe7S3vWC5zzLc0BDYouxkysv+j0EvP1vx84t4="
+notifications:
+  slack:
+    secure: "GVJcqmhKww+74MaAKiSPIf2oPxEFp0PoYHzdzL0xw5xd62OiJkrcdzOsiZ5DQxLlgU+MgWrxcxJmunMXOUvR7gt1V1WjuvYsmJ6+bC4/AU81Qr0z5BDANZRX7O8yA/WLvPyE5hsJQWAyBL0NFvkKbxzw/qKlaaoh+uUXI2FLA+LMq6kuW1BYyQuFsoX/14842ppRETrxK5uVAft7c+Egh68Tet5xO5lry3bBFZ0F75Jg5nuzgAgq3OcOe8Luo8FuekX75tBjT0hBNSM+Kn9LOPx25O6tRfivCJn1quOPNSNhet8zbeYecnSevW49VLtWi34fLX6rIsPcvGZg1Z5q1MjvxqDtuIEnhLBeR/8+hK+dLu6MP0YGcG4jBELEH13WlkmJJcH1X+DmRLK1tkgwWhJlW1RJ/QHPoqsMKMNFxS4aDenFGiYXSvv7skX8pr+i2QW1j55V6AU55OCvhsrgyHwFXlA+1ItU5geCVvmLscg8RXF7HuTrZrN/UxLjDVPAjY4rHS2ccZx1g3vo+K0OWafKk6yOi9J7rfwT+OGCMGv3Q57i1ShDIHvmfzfJmsjhtRCvKowwUrw2/Udean/ncdcRLvTTv0Xn+ioxnWAyvWo7UMdXj7YeHvp4bT9pY2eSjfHjB6Fe7S3vWC5zzLc0BDYouxkysv+j0EvP1vx84t4="

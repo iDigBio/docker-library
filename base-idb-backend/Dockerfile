@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgdal-dev \
     liblapack-dev \
     libpq-dev \
+    libsystemd-dev \
   && rm -rf /var/lib/apt/lists/*

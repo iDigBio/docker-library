@@ -20,6 +20,10 @@ jobs:
     env:
       - DOCKERFILE_DIR=base-idb-backend-python3
       - DOCKER_IMAGE_NAME=idigbio/docker-library.base-idb-backend-python3
+  - name: "idb Tackle Box (Ubuntu 18.04 Bionic)"
+    env:
+      - DOCKERFILE_DIR=idb-tacklebox-bionic
+      - DOCKER_IMAGE_NAME=idigbio/docker-library.idb-tacklebox-bionic
 
 script:
   - docker build -t "$DOCKER_IMAGE_NAME:$TRAVIS_COMMIT" "$DOCKERFILE_DIR"

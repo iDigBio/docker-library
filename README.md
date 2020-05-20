@@ -25,9 +25,9 @@ There are 3 steps to add a new Dockerfile to this library repo.
 
 1. Create a new directory. Choose wisely because the directory name will
 also be used as the docker hub repository name.
-2. Add a README and Dockerfile to the directory.
-3. Add the job specifics to `.travis.yml` in the `jobs.include` section,
-using the directory name as the value of DOCKERFILE_DIR and a component of 
+2. In the new directory, add and customize `README.md` and `Dockerfile`
+3. Add new job specifics to the top level `.travis.yml` in the `jobs.include` section,
+using the directory name as the value of DOCKERFILE_DIR and as a component of 
 DOCKER_IMAGE_NAME.
 
 Example:

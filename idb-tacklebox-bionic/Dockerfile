@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     httpie \
     postgresql-client \
     s3cmd \
+    vim \
   && rm -rf /var/lib/apt/lists/*
